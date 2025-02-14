@@ -1,0 +1,179 @@
+/* Full-screen black background with no white edges */
+.princess-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #48A6A7; /* Pure black */
+  color: rgb(10, 10, 10);
+  overflow: hidden;
+}
+.princess-container h1 {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInText 5s ease-out forwards;
+}
+
+/* Define the fade-in animation */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+/* Glassmorphic Effect for Card */
+.princess-card {
+  background: #FCC6FF;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.princess-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.3);
+}
+.princess-card p{
+  color: rgb(178, 0, 0);
+  text-transform: capitalize;
+  text-decoration: dashed;
+}
+
+/* Input Field with Glassmorphic Effect */
+.princess-input {
+  width: 60%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: white;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+/* Change Placeholder & Input Text */
+.princess-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.princess-input:focus {
+  background: #b4b4b4;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Button with Neon Glow Effect */
+.princess-button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #ff007f, #ff00ff);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.5);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+p{
+  font-weight: bold;
+}
+/* Fancy Hover Effect */
+.princess-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.8);
+}
+
+/* Text Selection Color (Pink) */
+::selection {
+  background: #ff00ff;
+  color: white;
+}
+.new-message {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: pink; /* Stylish pink text */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+/* Loading text animation */
+.loading-text {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: yellow;
+  animation: fadeBlink 1s infinite alternate;
+}
+
+@keyframes fadeBlink {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Button disabled effect */
+.princess-button:disabled {
+  background: #999;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Text Selection Color (Pink) */
+::selection {
+  background: #ff00ff;
+  color: white;
+}
+/* Animation for text inside .princess-card */
+.princess-card p {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInText 15s ease-out forwards;
+}
+
+/* Define the fade-in animation */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
